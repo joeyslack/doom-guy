@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doom Guy: Websocket Edition</title>
+    <link rel="stylesheet" href="doom.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="doom blood0 frame1" onClick="moreBlood()"></div>
+    <button onclick="makeAngry()">Make Angry</button>
+    <button onclick="lessAngry(0)">Not Angry</button>
+    <!-- <button onclick="moreBlood()">More Blood</button>
+    <button onclick="lessBlood()">Less Blood</button> -->
+    <script>
+        // Helper for dynamic element querying
+        const e = (querySelector) => document.querySelector(querySelector);
+        var de = e('.doom');
+
+        var count = 1;
+        var speed = 1000;
+        var blood = 0;
+        var timer;
+        var angry = 0;
+
+        function mainLoop() {
+            // Main event loop to handle animation
+            timer = setTimeout(() => {
+                
+                var frameCount = 3;
+                if (angry) frameCount = 8;
+                if (count > frameCount)
+                    count = 1;
+
+
+                // if (angry) {
+                //     de.className += ' angry';
+                // }
+                var applyClasses = '';
+
+                if (angry) applyClasses += 'angry';
+
+                applyClasses += ' doom blood' + blood + ' frame' + count;
+                de.className = applyClasses;
+                
+                mainLoop();
+
+                if (speed >= 500) {
+                    // lessAngry();
+                }
+                if (speed >= 1000) {
+                    // lessBlood();
+                    lessAngry();
+                }
+
+                if (speed < 1000) speed += 50;
+
+                count++;
+
+            }, speed);
+        }
+
+        // Start animation
+        mainLoop();
+
+        function moreBlood(e) {
+            clearTimeout(timer);
+
+            blood++;
+            if (blood > 5) blood = 0;
+
+            // We set to 0 so we immediately execute the next frame, and use the timer for subsequent requests
+            var tmp = speed;
+            speed = 0;
+            mainLoop();
+            speed = tmp < 300 ? 300 : tmp - 150;
+        }
+
+        function lessBlood(e) {
+            blood--;
+            if (blood < 0) {
+                blood = 0;
+            }
+        }
+
+        function makeAngry(e) {
+            angry = 8;
+        }
+
+        function lessAngry(amt) {
+            if (amt !== null) angry = amt;
+            else {
+                angry--;
+                if (angry < 0) angry = 0;
+            }
+            
+        }
+
+        const ws = new WebSocket('ws://localhost:3000');
+        var last = {'power': 0, 'current': 0, 'voltage': 0};
+
+        ws.addEventListener('error', (event) => {
+            console.log("Websocket error: ", event);
+        });
+
+        // let count = 0;
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            console.log('Received raw data:', data);
+
+            let voltage = Number(data.voltage);
+            let current = Number(data.current);
+            let power = Number(voltage) * Number(current);
+
+            if (voltage > last['voltage']) moreBlood();
+            else if (voltage > 0 && voltage > last['voltage']) lessBlood();
+            if (current > last['current']) makeAngry();
+            else if (current > 0 && voltage > last['voltage']) lessAngry();
+
+            last['power'] = power;
+            last['current'] = current;
+            last['voltage'] = voltage;
+        }
+    </script>
+</body>
+</html>
