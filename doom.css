@@ -1,0 +1,328 @@
+.doom {
+	zoom: 10;
+}
+.blood0.frame1 {
+	background: url('doom.png') no-repeat -14px -13px;
+	width: 24px;
+	height: 29px;	
+}
+.blood0.frame2 {
+	background: url('doom.png') no-repeat -40px -13px;
+	width: 24px;
+	height: 29px;
+}
+.blood0.frame3 {
+	background: url('doom.png') no-repeat -66px -13px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+.blood1.frame1 {
+	background: url('doom.png') no-repeat -14px -44px;
+	width: 24px;
+	height: 29px;
+}
+.blood1.frame2 {
+	background: url('doom.png') no-repeat -40px -44px;
+	width: 24px;
+	height: 29px;
+}
+.blood1.frame3 {
+	background: url('doom.png') no-repeat -66px -44px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+.blood2.frame1 {
+	background: url('doom.png') no-repeat -14px -75px;
+	width: 24px;
+	height: 29px;
+}
+.blood2.frame2 {
+	background: url('doom.png') no-repeat -40px -75px;
+	width: 24px;
+	height: 29px;
+}
+.blood2.frame3 {
+	background: url('doom.png') no-repeat -66px -75px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+
+
+.blood3.frame1 {
+	background: url('doom.png') no-repeat -14px -107px;
+	width: 24px;
+	height: 29px;
+}
+.blood3.frame2 {
+	background: url('doom.png') no-repeat -40px -107px;
+	width: 24px;
+	height: 29px;
+}
+.blood3.frame3 {
+	background: url('doom.png') no-repeat -66px -107px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+
+
+.blood4.frame1 {
+	background: url('doom.png') no-repeat -14px -140px;
+	width: 24px;
+	height: 29px;
+}
+.blood4.frame2 {
+	background: url('doom.png') no-repeat -40px -140px;
+	width: 24px;
+	height: 29px;
+}
+.blood4.frame3 {
+	background: url('doom.png') no-repeat -66px -140px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+/*******************************/
+
+.blood5, .dead {
+	background: url('doom.png') no-repeat -14px -335px;
+	width: 24px;
+	height: 29px;
+}
+
+.blood6, .god, .angry.blood5 {
+	background: url('doom.png') no-repeat -40px -335px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+.angry.blood0.frame1 {
+	background: url('doom.png') no-repeat -14px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood0.frame2 {
+	background: url('doom.png') no-repeat -14px -205px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood0.frame3 {
+	background: url('doom.png') no-repeat -14px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood0.frame4 {
+	background: url('doom.png') no-repeat -14px -238px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood0.frame5 {
+	background: url('doom.png') no-repeat -14px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood0.frame6 {
+	background: url('doom.png') no-repeat -14px -270px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood0.frame7 {
+	background: url('doom.png') no-repeat -14px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood0.frame8 {
+	background: url('doom.png') no-repeat -14px -303px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+.angry.blood1.frame1 {
+	background: url('doom.png') no-repeat -40px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood1.frame2 {
+	background: url('doom.png') no-repeat -42px -205px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood1.frame3 {
+	background: url('doom.png') no-repeat -40px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood1.frame4 {
+	background: url('doom.png') no-repeat -42px -238px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood1.frame5 {
+	background: url('doom.png') no-repeat -40px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood1.frame6 {
+	background: url('doom.png') no-repeat -40px -270px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood1.frame7 {
+	background: url('doom.png') no-repeat -40px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood1.frame8 {
+	background: url('doom.png') no-repeat -40px -303px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+.angry.blood2.frame1 {
+	background: url('doom.png') no-repeat -66px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood2.frame2 {
+	background: url('doom.png') no-repeat -70px -205px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood2.frame3 {
+	background: url('doom.png') no-repeat -66px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood2.frame4 {
+	background: url('doom.png') no-repeat -70px -238px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood2.frame5 {
+	background: url('doom.png') no-repeat -66px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood2.frame6 {
+	background: url('doom.png') no-repeat -66px -270px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood2.frame7 {
+	background: url('doom.png') no-repeat -66px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood2.frame8 {
+	background: url('doom.png') no-repeat -66px -303px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+
+
+.angry.blood3.frame1 {
+	background: url('doom.png') no-repeat -92px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood3.frame2 {
+	background: url('doom.png') no-repeat -99px -205px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood3.frame3 {
+	background: url('doom.png') no-repeat -92px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood3.frame4 {
+	background: url('doom.png') no-repeat -99px -238px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood3.frame5 {
+	background: url('doom.png') no-repeat -92px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood3.frame6 {
+	background: url('doom.png') no-repeat -92px -270px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood3.frame7 {
+	background: url('doom.png') no-repeat -92px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood3.frame8 {
+	background: url('doom.png') no-repeat -92px -303px;
+	width: 24px;
+	height: 29px;
+}
+
+
+
+.angry.blood4.frame1 {
+	background: url('doom.png') no-repeat -118px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood4.frame2 {
+	background: url('doom.png') no-repeat -130px -205px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood4.frame3 {
+	background: url('doom.png') no-repeat -118px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood4.frame4 {
+	background: url('doom.png') no-repeat -129px -238px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood4.frame5 {
+	background: url('doom.png') no-repeat -118px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood4.frame6 {
+	background: url('doom.png') no-repeat -118px -270px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood4.frame7 {
+	background: url('doom.png') no-repeat -118px -173px;
+	width: 24px;
+	height: 29px;
+}
+.angry.blood4.frame8 {
+	background: url('doom.png') no-repeat -118px -303px;
+	width: 24px;
+	height: 29px;
+}
+
